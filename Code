@@ -1,0 +1,186 @@
+echo "# CostcoSimulator" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ChinthaMi6/CostcoSimulator.git
+git push -u origin main
+
+#Parts of the Game
+Entrance = False
+Shopping = False
+GettingLost = False
+BreadAisle = False
+Closing = False
+Aliens = False
+
+#Tutorial
+print("-------------TUTORIAL--------------")
+print("Hi User! Welcome to the Costco Simulator! Your aim is to do everything on your Costco Shopping List. But as we all know we can easily get distracted at Costco and ANYTHING can happen. Essentially, do everything on you shopping list before the store closes to win. Good Luck!")
+print("Your List... Enter the Store, Get Bread, Get Sugar, Don't Get Lost, And Check-Out")
+print("THE GAME BEGINS!")
+Entrance = True
+
+#Entrance
+if Entrance == True:
+  #Asks for Card
+  print("----------------------PART ONE: THE ENTRANCE---------------------")
+  print('''_________                 __         
+\_   ___ \  ____  _______/  |_  ____  ____  
+/    \  \/ /  _ \/  ___/\   __\/ ___\/  _ \ 
+\     \___(  <_> )___ \  |  | \  \__(  <_> )
+ \______  /\____/____  > |__|  \___  >____/ 
+        \/           \/            \/     
+''')
+  print("Hi, Welcome to Costco!")
+  a = input('''Employee: Card Please...?
+1 = Yes
+2 = No ''')
+
+  if a == "1":
+    print("Great, You're Free to Go!")
+    Shopping = True
+  if a == "2":
+    print("Employee: Eh... I'm sorry you can't enter")
+    print("You fail to buy anything...")
+    print("------------------Game Over----------------------")
+    print("You fail to buy anything! You lose!")
+
+
+#Shopping
+#Shopping Distraction
+if Shopping == True:
+  #Shopping Distraction
+  print("-------------------PART TWO: SHOPPING--------------------")
+  print('''   
+   __   __
+ /|  `-´  |\
+/_|       |_\
+  |       |
+  |       |
+  |_______|
+      ''')
+  print("Mom: Ok, Honey... We're here to only buy some milk and eggs so let's get it quickly!")
+  print("As you and your mom walk towards the milk aisle she spots the clothing section! What do you do?")
+  print("Mom: Ohhh, wait a second... let me take a look at these clothes! OMG, their great and on sale too")
+  b = input('''Do you... 
+1. Drag Your Mom Away
+2. Go with the Flow!
+''')
+  if b == "2":
+    print("What was supposed to be several minutes turned out to be several hours. At the end you forget to get the bread and milk, but walk out the store with a bunch of clothes!")
+    print("------------------Game Over----------------------")
+    print("You enter the store but fail to complete any of the other tasks on your checklist... You reached a score of 1!")
+    print("------------------Thanks for Playing----------------------")
+
+
+  if b == "1":
+    print("You take your Mom away to the bread aisle...")
+    BreadAisle = True
+#Bread
+#Getting Bread
+#Getting Bread
+if BreadAisle == True:
+  #Getting Bread
+  print("----------------------PART THREE: THE BREAD---------------------")
+  print('''
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣿⣿⣿⣿⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠤⣤⣄⣉⠙⢻⡟⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⢿⣷⣦⣤⣈⣉⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠒⠶⣶⣦⣤⣈⠙⢻⡟⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠾⢿⣷⣦⣤⣤⣤⣤⡤⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⠐⠶⣶⣤⣄⡉⠻⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠾⢿⣿⣦⣤⣬⣉⣉⣤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⣄⠑⠲⠤⣈⠙⢻⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣿⣿⣿⣶⣦⣤⣤⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⣿⣿⣿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ''')
+  print("Mom: Ah... the bread aisle! Oh so many types of bread! What should we get...")
+  print("Mom: What do you think honey?")
+  #Types of Bread
+  c = input('''I think we should buy...
+1. Whole Grain
+2. Whole Wheat
+3. AnyType''')
+  if c == "1" or "2":
+    print("Good Choice... But...")
+    print("Honestly, I think we should just go with croissants")
+  if c == "3":
+    print("Hmm... Let's go with Whole Grain. But, Multi Grain is also good. But, whole wheat is also good. Hmm... ")
+    print("20 Minutes Later...")
+    print("Let's go with whole grain!")
+  GettingLost = True
+
+#Getting Lost Distraction
+#Getting Lost in Store
+#Wandering Around and Potentially Getting Lost
+if GettingLost == True:
+  #Decision of Wandering around or not
+  print("--------------------------PART FOUR: LOST-----------------------")
+  
+  print("Mom: Wait here, I'm gonna go quickly grab something... ")
+  d = input('''Are you going to wander around(1) or are you going to stay put(2)?''')
+  #Wandering Around
+  if d == "1":
+    print("You decide to wander around! ")
+    print("Eventually, you get lost...!")
+    print("It takes forever for your mom to find you... and the store closes!")
+    print("------------------GAME OVER----------------------")
+    print("Your score was 2. You successfully entered the store and got bread but failed to finish the rest of you checklist")
+    print("------------------Thanks for Playing----------------------")
+  #Staying Put
+  if d == "2":
+    print("You stay put... eventually your mom comes back! But, before you leave you still need one more thing, SUGAR! But make it QUICK the store is CLOSING! ")
+    Closing = True
+#Closing Time
+#Closing Time
+#Closing Time Rush
+if Closing == True:
+  print("-----------------------PART FIVE: CLOSING RUSH HOUR----------------------")
+  e = input("You look around but can't find the Sugar... You can look for it longer but the store is closing and you are in a hurry... WHAT DO YOU DO? Continue Looking (1) or Ask and Employee (2)")
+  #Look For It
+  if e == "1":
+    print("You decide to look for it yourself, luckily you find it just in time!")
+    Aliens = True
+  #Ask for Assistance
+  if e == "2":
+    print("You decide to ask an employee, he tries to help you but doesn't find it... you don't find the sugar!")
+    print("------------------GAME OVER----------------------")
+    print("You lose. Your score was 3. You entered the store, brought bread, didn't get lost, but you didn't get the sugar!")
+    print("------------------Thanks for Playing----------------------")
+#Aliens
+#Alien Rock
+#Alien Abduction
+if Aliens == True:
+  #Alien Object
+  print("-------------------PART SIX: THE ALIENS--------------------")
+  print('''
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⣿⣿⣿⣿⣶⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣿⣦⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢿⣿⣷⡀⠀⠈⠻⣿⣿⣿⣿⠟⠁⠀⢀⣾⣿⡿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣶⣤⡘⣿⣿⢃⣤⣶⣿⡿⠟⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⡿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀        ⠀⠙⢿⡿⠋⠀⠀
+        ''')
+  print("Suddenly, an mysterious alienistic rock makes a hole through the celing and lands near you... the rock is small and it's glowing...")
+  f = input("What do you do...? Go closer(1) or mind your own buisness and check-out your items(2)")
+  #Getting Curious of Rock
+  #Go Closer
+  if f == "1":
+    print("As you go closer... you become more curious... you touch the rock! You get sucked in, and everything turns black! To Be Continued!")
+    print("------------------GAME OVER----------------------")
+    print("Your score was 3. You entered the store, got bread, got sugar, and didn't get lost. But, you didn't checkout!")
+    print("------------------Thanks for Playing----------------------")
+  #Ignore
+  if f == "2":
+    print("You checkout... You win the game, as you successfully do everything on your shopping list!")
+    print("---------------------YOU WIN!---------------------")
+    print("------------------Thanks for Playing----------------------")
+    
+
+  
+    
